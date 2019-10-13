@@ -90,7 +90,7 @@ def CrossEntropy(y_hypothesis,y):
 
     clippedYh = np.clip(y_hypothesis, EPSILON_CROSS_ENTROPY, 1.0-EPSILON_CROSS_ENTROPY)
 
-    return (-1/y.shape[0]) * (y*np.log(clippedYh) + (1-y)*np.log(clippedYh))
+    return (-1/y.shape[0]) * (y*np.log(clippedYh) + (1-y)*np.log(1-clippedYh))
 
 def dCrossEntropy(y_hypothesis, y):
     """

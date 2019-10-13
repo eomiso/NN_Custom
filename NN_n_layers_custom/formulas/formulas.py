@@ -47,7 +47,7 @@ def Sigmoid(x):
         raise TypeError("x's type should be %s. But it's %s"%("numpy ndarray",type(x)))
     x[x<-500] = -500
     x[x> 500] = 500
-    return 1/(1+np.exp(x))
+    return 1/(1+np.exp(-x))
 
 def dSigmoid(x):
     """

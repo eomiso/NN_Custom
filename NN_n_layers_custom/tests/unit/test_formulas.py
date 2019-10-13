@@ -89,7 +89,7 @@ class TestFormulas(unittest.TestCase):
         input = np.array([[0.2471631 , 0.19754066, 0.17262882, 0.05680401]]), np.array([[1, 0, 0, 0]])
         actual_return = formulas.CrossEntropy(*input)
         # 여기 소수점을 어떻게 처리할 것인지에 대해서 고민해 봐야 한다. -> np.testing 으로 해결
-        expected_return = np.array([[1.3977068, 1.6218108, 1.7566115, 2.8681484]])
+        expected_return = np.array([[1.3977068, 0.2200741, 0.1895019, 0.0584812]])
 
         np.testing.assert_array_almost_equal(actual_return, expected_return, decimal= 7)
 
